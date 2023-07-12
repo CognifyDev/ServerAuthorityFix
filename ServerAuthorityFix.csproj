@@ -11,6 +11,7 @@
         <VersionSuffix>dev</VersionSuffix>
         <Description>A server authority fixer for Among Us</Description>
         <Authors>commandf1</Authors>
+        <Version>1.0.1</Version>
     </PropertyGroup>
 	
 	<ItemGroup>

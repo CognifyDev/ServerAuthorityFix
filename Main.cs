@@ -11,7 +11,7 @@ public class Main : BasePlugin
 {
     public const string PluginName = "Server Authority Fix";
     public const string PluginGuid = "top.cog.serverauthorityfix";
-    public const string PluginVersion = "1.0.0";
+    public const string PluginVersion = "1.0.1";
     public Harmony harmony { get; } = new(PluginGuid);
     public static ManualLogSource? Logger { get; private set; }
 
