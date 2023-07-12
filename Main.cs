@@ -5,9 +5,9 @@ using HarmonyLib;
 
 namespace ServerAuthorityFix;
 
-[BepInAutoPlugin(PluginGuid, PluginName, PluginVersion)]
+[BepInPlugin(PluginGuid, PluginName, PluginVersion)]
 [BepInProcess("Among Us.exe")]
-public partial class Main : BasePlugin
+public class Main : BasePlugin
 {
     public const string PluginName = "Server Authority Fix";
     public const string PluginGuid = "top.cog.serverauthorityfix";
@@ -19,8 +19,9 @@ public partial class Main : BasePlugin
     {
         Logger = BepInEx.Logging.Logger.CreateLogSource(PluginName);
         
-        Logger.LogInfo("Plugin loaded successfully.");
         harmony.PatchAll();
+        
+        Logger.LogInfo("Plugin loaded successfully.");
     }
     
     [HarmonyPatch(typeof(Constants), nameof(Constants.GetBroadcastVersion))]
